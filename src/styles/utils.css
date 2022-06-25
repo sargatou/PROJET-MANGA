@@ -1,0 +1,203 @@
+.click:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.direction-row {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.espace0 {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+/* carousel */
+.navCarousel {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.carousel__dot-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100px);
+}
+.carousel__dot-group > button {
+  border-radius: 50%;
+  height: 3px;
+  width: 3px;
+  margin: 0 3px;
+}
+
+.dotContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-50px);
+}
+
+.dotClass {
+  width: 30px;
+  height: 30px;
+}
+.dotClass > img {
+  width: 30px;
+  height: 30px;
+}
+
+/* bandeau de promotion */
+.promo {
+  position: absolute;
+  background-color: brown;
+  color: yellow;
+  font-weight: bolder;
+  width: 25%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  padding: 25px 0;
+  border-bottom-right-radius: 100%;
+}
+
+/* pagination */
+.PageBtn {
+  width: 3em;
+  height: 3em;
+  margin: 0 0.5em;
+  border: none;
+}
+
+.PageBtn.actif {
+  background-color: blue;
+  color: white;
+}
+
+.PageBtn > i {
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+/* barre de recherche */
+.searchBar {
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  border: 1px grey solid;
+  border-radius: 20px;
+  max-width: 20%;
+  justify-content: center;
+}
+.searchBar > input,
+.searchBar > button {
+  outline: none;
+  border: none;
+  background-color: #fff;
+  max-width: 80%;
+}
+
+.produit_similaire:hover {
+  opacity: 0.5;
+}
+
+/* panier */
+.Notif-panier {
+  background-color: rgb(44, 206, 255);
+  position: fixed;
+  top: 50%;
+  right: 0;
+  max-width: 400px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.qteButton {
+  display: flex;
+  border: none;
+  width: 90px;
+  height: 30px;
+  padding: 0;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.qteButton > button {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  width: 30%;
+  font-weight: bolder;
+}
+
+.separator {
+  border-bottom: rgb(49, 49, 49) 1px solid;
+}
+
+.qteButton > p {
+  margin: 0px;
+  font-weight: bolder;
+}
+
+.ArtcleContainer {  display: grid;
+  grid-template-columns: 20% 70% 10%;
+  grid-template-rows: 200px;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas:
+    "img description close";
+  background-color: rgb(223, 220, 201);
+  margin: 5px 0;
+}
+
+.img { grid-area: img; }
+
+.description {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Titre"
+    "prix"
+    "qte";
+  justify-self: start;
+  grid-area: description;
+}
+
+.Titre { grid-area: Titre; }
+
+.prix { grid-area: prix; }
+
+.qte { grid-area: qte; }
+
+.close {
+  justify-self: end;
+  align-self: start;
+  grid-area: close;
+}
+
+
+/* responsivité */
+.mobile-only {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+  .mobile-only {
+    display: block;
+  }
+
+  .direction-colum-mobile {
+    flex-direction: column;
+  }
+
+  .direction-colum-mobile > img {
+    width: 100px;
+  }
+}
